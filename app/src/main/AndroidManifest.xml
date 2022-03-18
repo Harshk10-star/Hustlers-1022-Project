@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumberGuess">
         <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LevelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
