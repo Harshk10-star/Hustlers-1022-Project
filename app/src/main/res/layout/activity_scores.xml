@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/hardScore" />
 
     <Button
-        android:id="@+id/homepage"
+        android:id="@+id/homeFromScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"

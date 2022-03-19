@@ -13,7 +13,7 @@ public class ScoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
-        homePage=(Button) findViewById(R.id.homepage);
+        homePage=(Button) findViewById(R.id.homeFromScore);
         homePage.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
