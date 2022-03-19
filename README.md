@@ -32,6 +32,8 @@ Acker
 nacker@my.yorku.ca 
  	Lecture Section:
  N	Lab Section: 3
+ Student Number:
+ 215459159
  
 Project Title: 
 Guessing game
