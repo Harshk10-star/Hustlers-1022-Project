@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".ScoresActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="149dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Instructions"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="125dp" />
+
+    <TextView
+        android:id="@+id/ins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="The number will be randomized between the parameter numbers 1-10(easy), 1-30(medium), 1-50(hard).  You can select your level. You will be able to guess  as many times as they like until you enter a 0, however the number being guessed  will be different each time. The program records how many successful guesses the user had in a row and stores it in high score, the most correctly guessed in a row, along with displaying a congratulatory message. The points associated with the user guessing the  number correctly will be dependent upon the level and number of guesses correct in a row. For easy level the base point is 1, for medium level it is 2. For the hard level the base point is 3 and for the extreme level the base point is 5.  You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <Button
+        android:id="@+id/HomePage"
+        android:layout_width="129dp"
+        android:layout_height="40dp"
+        android:text="Go to Home"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="440dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
