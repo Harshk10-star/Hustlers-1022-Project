@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonStart=findViewById(R.id.start);
+        buttonStart=(Button) findViewById(R.id.start);
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-        buttonInstructions=findViewById(R.id.instructions);
+        buttonInstructions=(Button) findViewById(R.id.instructions);
         buttonInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonHigh=findViewById(R.id.highscores);
+        buttonHigh=(Button) findViewById(R.id.highscores);
         buttonHigh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
