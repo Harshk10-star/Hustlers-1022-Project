@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class ScoresActivity extends AppCompatActivity {
     private Button homePage;
+    private Button easytoGame;
+    private Button toGame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,4 +27,5 @@ public class ScoresActivity extends AppCompatActivity {
         });
 
     }
+
 }
