@@ -14,6 +14,7 @@ public class LevelActivity extends AppCompatActivity {
     private Button mediumToGame;
     private Button hardToGame;
     private Button extremeToGame;
+    private Button Home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +69,18 @@ public class LevelActivity extends AppCompatActivity {
             public void onClick(View v){
                 levelChosen="extreme";
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+
+        Home=(Button) findViewById(R.id.Home);
+        Home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(LevelActivity.this,MainActivity.class);
                 startActivity(intent);
                 finish();
 
