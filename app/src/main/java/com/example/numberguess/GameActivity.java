@@ -8,8 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-public class
-GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
 
 
     private EditText guess;
@@ -19,8 +18,10 @@ GameActivity extends AppCompatActivity {
     private Button Guess;
     private View listener;
     private int randomNum;
-    private LevelActivity level=new LevelActivity();
-
+    private String level;
+    public GameActivity(String level){
+        this.level=level;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ GameActivity extends AppCompatActivity {
 
 
     }
-    public void  buttonClicked(View v){
+    public void  onClick(View v){
         EditText textInput= (EditText) findViewById(R.id.guessText);
         String convertTextToString=textInput.getText().toString();
 
