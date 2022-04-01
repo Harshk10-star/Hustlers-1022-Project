@@ -19,6 +19,7 @@ GameActivity extends AppCompatActivity {
     private Button Guess;
     private View listener;
     private int randomNum;
+    private LevelActivity level=new LevelActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,31 +28,15 @@ GameActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-    public View easy(){
-
-
+    public void  buttonClicked(View v){
+        EditText textInput= (EditText) findViewById(R.id.guessText);
+        String convertTextToString=textInput.getText().toString();
 
 
     }
 
 
-    public View medium(){
 
-    }
-
-
-    public View hard(){
-
-    }
-
-
-    public View extreme(){
-
-    }
 
 
 

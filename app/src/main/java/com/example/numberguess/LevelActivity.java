@@ -9,11 +9,12 @@ import android.widget.Button;
 
 public class LevelActivity extends AppCompatActivity {
     private Button tohome;
-    public String levelChosen;
+    private String levelChosen;
     private Button easyToGame;
     private Button mediumToGame;
     private Button hardToGame;
     private Button extremeToGame;
+
 
 
     @Override
@@ -43,7 +44,6 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
-             new GameActivity().easy();
 
             }
         });
@@ -58,7 +58,7 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
-                new GameActivity().medium();
+
 
             }
         });
@@ -72,7 +72,7 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
-                new GameActivity().hard();
+
 
             }
         });
@@ -82,12 +82,12 @@ public class LevelActivity extends AppCompatActivity {
         extremeToGame.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                levelChosen="extreme";
+                levelChosen="hard";
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
 
-                new GameActivity().extreme();
+
             }
         });
 
@@ -98,4 +98,5 @@ public class LevelActivity extends AppCompatActivity {
     public String getLevelChosen(){
         return levelChosen;
     }
+
 }
