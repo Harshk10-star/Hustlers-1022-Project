@@ -39,7 +39,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 levelChosen="easy";
-                GameActivity t= new GameActivity(levelChosen);
+                new GameActivity(levelChosen);
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
@@ -54,7 +54,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 levelChosen="medium";
-                GameActivity t= new GameActivity(levelChosen);
+                new GameActivity(levelChosen);
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
@@ -69,7 +69,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 levelChosen="hard";
-                GameActivity t= new GameActivity(levelChosen);
+                 new GameActivity(levelChosen);
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
@@ -85,7 +85,7 @@ public class LevelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 levelChosen="hard";
-                GameActivity t= new GameActivity(levelChosen);
+                new GameActivity(levelChosen);
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
