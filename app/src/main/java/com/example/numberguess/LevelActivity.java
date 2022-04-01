@@ -14,11 +14,14 @@ public class LevelActivity extends AppCompatActivity {
     private Button mediumToGame;
     private Button hardToGame;
     private Button extremeToGame;
-    private Button Home;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
+
+
         tohome=(Button) findViewById(R.id.homeFromLevel);
         tohome.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -29,6 +32,8 @@ public class LevelActivity extends AppCompatActivity {
             }
 
         });
+
+
         easyToGame=(Button) findViewById(R.id.easyLevel);
         easyToGame.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -38,8 +43,12 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
+             new GameActivity().easy();
+
             }
         });
+
+
         mediumToGame=(Button) findViewById(R.id.mediumLevel);
         mediumToGame.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -48,6 +57,8 @@ public class LevelActivity extends AppCompatActivity {
                 Intent intent=new Intent(LevelActivity.this,GameActivity.class);
                 startActivity(intent);
                 finish();
+
+                new GameActivity().medium();
 
             }
         });
@@ -61,8 +72,12 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
+                new GameActivity().hard();
+
             }
         });
+
+
         extremeToGame=(Button) findViewById(R.id.extremeLevel);
         extremeToGame.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,20 +87,12 @@ public class LevelActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
+                new GameActivity().extreme();
             }
         });
 
 
-        Home=(Button) findViewById(R.id.Home);
-        Home.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(LevelActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
 
-            }
-        });
     }
 
     public String getLevelChosen(){

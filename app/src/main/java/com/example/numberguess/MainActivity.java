@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-
-
         });
+
+
         buttonInstructions=(Button) findViewById(R.id.instructions);
         buttonInstructions.setOnClickListener(v -> {
             Intent intent=new Intent(MainActivity.this,InstructionsActivity.class);
