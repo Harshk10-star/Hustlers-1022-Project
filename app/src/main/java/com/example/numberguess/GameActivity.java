@@ -57,6 +57,8 @@ public class GameActivity extends AppCompatActivity {
             }else if(level=="extreme") {
                 number = getLevel.extreme();
             }
+            String sendBack="Good Job! Guess next number!";
+            ((TextView)findViewById(R.id.response)).setText(sendBack);
         }else{
             String sendBack="Incorrect try again!";
             ((TextView)findViewById(R.id.response)).setText(sendBack);
