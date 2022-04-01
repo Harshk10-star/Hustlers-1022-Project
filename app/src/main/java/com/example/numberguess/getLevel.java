@@ -3,7 +3,8 @@ package com.example.numberguess;
 public class getLevel {
 
     public static double easy(){
-        return 5;
+
+        return 10;
     }
     public static double medium(){
         return 5;
