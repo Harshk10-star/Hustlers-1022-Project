@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -19,8 +20,18 @@ public class GameActivity extends AppCompatActivity {
     private View listener;
     private int randomNum;
     private String level;
+    private int number;
     public GameActivity(String level){
         this.level=level;
+        if(level=="easy"){
+            number=getLevel.easy();
+        }else if(level=="medium"){
+            number=getLevel.easy();
+        }else if(level=="hard") {
+            number = getLevel.hard();
+        }else if(level=="extreme") {
+            number = getLevel.extreme();
+        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +45,22 @@ public class GameActivity extends AppCompatActivity {
         String convertTextToString=textInput.getText().toString();
 
 
+        int userChoice=getLevel.toInteger(convertTextToString);
+
+        if(userChoice==number){
+            if(level=="easy"){
+                number=getLevel.easy();
+            }else if(level=="medium"){
+                number=getLevel.easy();
+            }else if(level=="hard") {
+                number = getLevel.hard();
+            }else if(level=="extreme") {
+                number = getLevel.extreme();
+            }
+        }else{
+            String sendBack="Incorrect try again!";
+            ((TextView)findViewById(R.id.response)).setText(sendBack);
+        }
 
 
     }

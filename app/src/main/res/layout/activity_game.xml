@@ -92,4 +92,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="314dp" />
 
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="380dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
