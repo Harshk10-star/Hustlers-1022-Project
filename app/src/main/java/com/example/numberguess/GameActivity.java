@@ -60,7 +60,7 @@ public class GameActivity extends AppCompatActivity {
             String sendBack="Good Job! Guess next number!";
             ((TextView)findViewById(R.id.response)).setText(sendBack);
         }else{
-            String sendBack="Incorrect try again!";
+            String sendBack="Incorrect try agai!";
             ((TextView)findViewById(R.id.response)).setText(sendBack);
         }
 
