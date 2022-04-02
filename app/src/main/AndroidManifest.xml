@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NumberGuess">
         <activity
+            android:name=".GameActivityExtreme"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivityHard"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivityMedium"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivityEasy"
+            android:exported="false" />
+        <activity
             android:name=".GameActivity"
             android:exported="false" />
         <activity

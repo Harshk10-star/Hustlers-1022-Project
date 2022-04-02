@@ -25,7 +25,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        randomNum = getLevel.getRandomNum();
+    //    randomNum = getLevel.getRandomNum();
 
         getNumber=(Button) findViewById(R.id.guessButton);
         getNumber.setOnClickListener(new View.OnClickListener() {
