@@ -9,19 +9,7 @@ public class getLevel {
 
 
 
-    public int pointsCounter = 1;
 
-    public int easyHSPoints = 0;
-    public int easyHSAnsCor = 0;
-
-    public int mediumHSPoints = 0;
-    public int mediumHSAnsCor = 0;
-
-    public int hardHSPoints = 0;
-    public int hardHSAnsCor = 0;
-
-    public int extremeHSPoints = 0;
-    public int extremeHSAnsCor = 0;
 
     LevelActivity levelActivity = new LevelActivity();
 
@@ -71,15 +59,18 @@ public class getLevel {
         return guessedRandomNum;
     }
 
-    public int gethighscore(int currentPoints, boolean answerCorrect, String levelChosen){
+    public static int gethighscore(int currentPoints, String levelChosen, int pointsCounter){
 
         int basePoint = 0;
         int pointAdd = 1;
 
-        if(answerCorrect == true) {
+
 
             if (levelChosen.equals("easy") == true) {
                 basePoint = 1;
+
+
+
 
                 if (pointsCounter == 1) {
                     pointAdd = basePoint;
@@ -90,8 +81,7 @@ public class getLevel {
                 }
                 currentPoints = currentPoints + pointAdd;
 
-                easyHSPoints = currentPoints;
-                easyHSAnsCor++;
+
 
 
             } else if (levelChosen.equals("medium") == true) {
@@ -106,8 +96,7 @@ public class getLevel {
                 }
                 currentPoints = currentPoints + pointAdd;
 
-                mediumHSPoints = currentPoints;
-                mediumHSAnsCor++;
+
 
 
             } else if (levelChosen.equals("hard") == true) {
@@ -122,8 +111,7 @@ public class getLevel {
                 }
                 currentPoints = currentPoints + pointAdd;
 
-                hardHSPoints = currentPoints;
-                hardHSAnsCor++;
+
 
             } else if (levelChosen.equals("extreme") == true) {
                 basePoint = 5;
@@ -137,9 +125,8 @@ public class getLevel {
                 }
                 currentPoints = currentPoints + pointAdd;
 
-                extremeHSPoints = currentPoints;
-                extremeHSAnsCor++;
-            }
+
+
         }
         else
         {
