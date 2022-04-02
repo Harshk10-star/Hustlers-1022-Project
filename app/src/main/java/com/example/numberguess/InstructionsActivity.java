@@ -13,7 +13,7 @@ public class InstructionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
-        toMain=(Button) findViewById(R.id.homeFromIns);
+        toMain=(Button) findViewById(R.id.HomePage);
         toMain.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
