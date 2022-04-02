@@ -41,41 +41,47 @@ public class GameActivityEasy extends AppCompatActivity {
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
-                if(userChoice==0)
-                {
-                    Intent intent=new Intent(GameActivityEasy.this,MainActivity.class);
-                    startActivity(intent);
-                    finish();
-
-                }
-                else {
-
-                    if (getLevel.checkAnswerCorrect(randomNum, userChoice) == true) {
-
-                        randomNum = getLevel.getRandomNum("easy");
-
-                        pointsCounter++;
-
-                        currentPoints = getLevel.gethighscore(currentPoints, "easy", pointsCounter);
-                        highScore = currentPoints;
-                        overallCorrect++;
-                        output = String.format("The number you guessed is correct! Keep Going! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                        ((TextView) findViewById(R.id.outputText)).setText(output);
-
-
-                    } else {
-                        output = String.format("Wrong guess again! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                        ((TextView) findViewById(R.id.outputText)).setText(output);
-                        pointsCounter = 0;
-
-                        if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
-                            output = getLevel.getHint(randomNum, userChoice);
-                            output += String.format("Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                            ((TextView) findViewById(R.id.outputText)).setText(output);
-                        }
+                if(userChoice>0 && userChoice<11){
+                    if(userChoice==0)
+                    {
+                        Intent intent=new Intent(GameActivityEasy.this,MainActivity.class);
+                        startActivity(intent);
+                        finish();
 
                     }
+                    else {
 
+                        if (getLevel.checkAnswerCorrect(randomNum, userChoice) == true) {
+
+                            randomNum = getLevel.getRandomNum("easy");
+
+                            pointsCounter++;
+
+                            currentPoints = getLevel.gethighscore(currentPoints, "easy", pointsCounter);
+                            highScore = currentPoints;
+                            overallCorrect++;
+                            output = String.format("The number you guessed is correct! Keep Going! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
+                            ((TextView) findViewById(R.id.outputText)).setText(output);
+
+
+                        } else {
+                            output = String.format("Wrong guess again! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
+                            ((TextView) findViewById(R.id.outputText)).setText(output);
+                            pointsCounter = 0;
+
+                            if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
+                                output = getLevel.getHint(randomNum, userChoice);
+                                output += String.format("Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
+                                ((TextView) findViewById(R.id.outputText)).setText(output);
+                            }
+
+                        }
+
+
+                    }
+                }else{
+                    output="Enter a valid number!";
+                    ((TextView) findViewById(R.id.outputText)).setText(output);
 
                 }
 
