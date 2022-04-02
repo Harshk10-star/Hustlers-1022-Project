@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         buttonThemes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Themes.class);
+                Intent intent=new Intent(MainActivity.this,themeActivity.class);
                 startActivity(intent);
                 finish();
             }
