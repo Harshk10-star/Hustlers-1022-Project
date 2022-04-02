@@ -44,16 +44,17 @@ public class GameActivityEasy extends AppCompatActivity {
                }
                else
                {
-                   if(((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true)
-                   {
-                       output = getLevel.getHint(randomNum, userChoice);
-                   }
-                   else
-                   {
-                       output = " The number you guessed is incorrect, keep on trying!";
-                   }
+                   output = "Wrong guess again!";
+                   ((TextView) findViewById(R.id.outputText)).setText(output);
                }
-
+                if(((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true)
+                {
+                    output = getLevel.getHint(randomNum, userChoice);
+                }
+                else
+                {
+                    output = " The number you guessed is incorrect, keep on trying!";
+                }
 
 
 
