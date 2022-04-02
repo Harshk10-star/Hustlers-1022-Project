@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">NumberGuess</string>
+    <string-array name="themes">
+        <item>Themes</item>
+        <item>Galaxy</item>
+
+        <item>Rainstorm</item>
+        <item>Tech</item>
+    </string-array>
 </resources>
