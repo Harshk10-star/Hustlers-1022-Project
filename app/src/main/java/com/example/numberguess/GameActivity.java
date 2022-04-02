@@ -24,11 +24,11 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
     //    randomNum = getLevel.getRandomNum();
 
-        getNumber=(Button) findViewById(R.id.guessButtonM);
+        getNumber=(Button) findViewById(R.id.guessButton);
         getNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText textInput= (EditText) findViewById(R.id.guessTextM);
+                EditText textInput= (EditText) findViewById(R.id.guessText);
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
