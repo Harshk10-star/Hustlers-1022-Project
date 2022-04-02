@@ -21,6 +21,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+
         getNumber=(Button) findViewById(R.id.guessButton);
         getNumber.setOnClickListener(new View.OnClickListener() {
             @Override

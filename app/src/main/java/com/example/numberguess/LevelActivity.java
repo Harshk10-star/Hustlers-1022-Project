@@ -97,8 +97,13 @@ public class LevelActivity extends AppCompatActivity {
 
 
 
+
     }
 
+    public String getLevelChosen(){
 
+        return levelChosen;
+
+    }
 
 }
