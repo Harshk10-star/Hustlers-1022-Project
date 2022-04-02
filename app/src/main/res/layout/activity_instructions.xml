@@ -21,13 +21,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.018"
         tools:textStyle="bold" />
 
     <TextView
         android:id="@+id/ins"
-        android:layout_width="254dp"
-        android:layout_height="292dp"
+        android:layout_width="387dp"
+        android:layout_height="353dp"
         android:fontFamily="sans-serif"
         android:text="The number will be randomized between the parameter numbers 1-10(easy), 1-30(medium), 1-50(hard).  You can select your level. You have unlimited guesses until you enter a 0, however the number being guessed  will be different each time. The program records how many successful guesses the user had in a row and stores it in high score, the most correctly guessed in a row, along with displaying a congratulatory message. The points associated with the user guessing the  number correctly will be dependent upon the level and number of guesses correct in a row. For easy level the base point is 1, for medium level it is 2. For the hard level the base point is 3 and for the extreme level the base point is 5.  You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
         android:textAlignment="center"
@@ -37,20 +37,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.435" />
 
     <Button
         android:id="@+id/HomePage"
         android:layout_width="129dp"
         android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:text="Go to Home"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintTop_toBottomOf="@+id/ins" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,12 +9,20 @@ import android.widget.Button;
 
 public class ScoresActivity extends AppCompatActivity {
     private Button homePage;
-    private Button easytoGame;
-    private Button toGame;
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
+
+
+
+
+
         homePage=(Button) findViewById(R.id.homeFromScore);
         homePage.setOnClickListener(new View.OnClickListener(){
             @Override
