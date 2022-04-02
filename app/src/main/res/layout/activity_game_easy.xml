@@ -34,7 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/outputText"
+        android:id="@+id/outputTextM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -43,10 +43,10 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guessButton" />
+        app:layout_constraintTop_toBottomOf="@+id/guessButtonM" />
 
     <EditText
-        android:id="@+id/guessText"
+        android:id="@+id/guessTextM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/instructionsNum" />
 
     <CheckBox
-        android:id="@+id/hintCheckBox"
+        android:id="@+id/hintCheckBoxM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -68,10 +68,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/outputText" />
+        app:layout_constraintTop_toTopOf="@+id/outputTextM" />
 
     <Button
-        android:id="@+id/guessToHome"
+        android:id="@+id/guessToHomeM"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="120dp"
@@ -80,11 +80,11 @@
         android:text="Homepage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/hintCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/hintCheckBoxM"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/guessButton"
+        android:id="@+id/guessButtonM"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF5722"
@@ -92,6 +92,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guessText" />
+        app:layout_constraintTop_toBottomOf="@+id/guessTextM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

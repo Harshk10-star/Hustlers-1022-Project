@@ -31,13 +31,13 @@ public class GameActivityEasy extends AppCompatActivity {
 
 
 
-        getNumber=(Button) findViewById(R.id.guessButton);
+        getNumber=(Button) findViewById(R.id.guessButtonM);
         getNumber.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View view) {
-                EditText textInput= (EditText) findViewById(R.id.guessText);
+                EditText textInput= (EditText) findViewById(R.id.guessTextM);
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
@@ -61,18 +61,18 @@ public class GameActivityEasy extends AppCompatActivity {
                             highScore = currentPoints;
                             overallCorrect++;
                             output = String.format("The number you guessed is correct! Keep Going! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                            ((TextView) findViewById(R.id.outputText)).setText(output);
+                            ((TextView) findViewById(R.id.outputTextM)).setText(output);
 
 
                         } else {
                             output = String.format("Wrong guess again! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                            ((TextView) findViewById(R.id.outputText)).setText(output);
+                            ((TextView) findViewById(R.id.outputTextM)).setText(output);
                             pointsCounter = 0;
 
-                            if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
+                            if (((CheckBox) findViewById(R.id.hintCheckBoxM)).isChecked() == true) {
                                 output = getLevel.getHint(randomNum, userChoice);
                                 output += String.format("Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
-                                ((TextView) findViewById(R.id.outputText)).setText(output);
+                                ((TextView) findViewById(R.id.outputTextM)).setText(output);
                             }
 
                         }
@@ -81,7 +81,7 @@ public class GameActivityEasy extends AppCompatActivity {
                     }
                 }else{
                     output="Enter a valid number!";
-                    ((TextView) findViewById(R.id.outputText)).setText(output);
+                    ((TextView) findViewById(R.id.outputTextM)).setText(output);
 
                 }
 
@@ -96,7 +96,7 @@ public class GameActivityEasy extends AppCompatActivity {
         });
 
 
-       tohome=(Button) findViewById(R.id.guessToHome);
+       tohome=(Button) findViewById(R.id.guessToHomeM);
         tohome.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
