@@ -2,6 +2,7 @@ package com.example.numberguess;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,13 +10,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class GameActivityEasy extends AppCompatActivity {
 
     private int randomNum;
     private Button getNumber;
-    private Button exitGame;
+    private Button tohome;
     private String output;
     private int pointsCounter = 0;
     private int currentPoints;
@@ -31,6 +30,7 @@ public class GameActivityEasy extends AppCompatActivity {
         randomNum = getLevel.getRandomNum("easy");
 
 
+
         getNumber=(Button) findViewById(R.id.guessButton);
         getNumber.setOnClickListener(new View.OnClickListener() {
 
@@ -41,17 +41,16 @@ public class GameActivityEasy extends AppCompatActivity {
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
-             /*   if(userChoice==0)
+                if(userChoice==0)
                 {
-                    //that means they want to exit the game
-                    userExitGame();
+                    Intent intent=new Intent(GameActivityEasy.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
 
                 }
-                else {*/
+                else {
 
                     if (getLevel.checkAnswerCorrect(randomNum, userChoice) == true) {
-                        output = "The number you guessed is correct! Keep Going!";
-                        ((TextView) findViewById(R.id.outputText)).setText(output);
 
                         randomNum = getLevel.getRandomNum("easy");
 
@@ -59,53 +58,66 @@ public class GameActivityEasy extends AppCompatActivity {
 
                         currentPoints = getLevel.gethighscore(currentPoints, "easy", pointsCounter);
                         highScore = currentPoints;
+                        overallCorrect++;
+                        output = String.format("The number you guessed is correct! Keep Going! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
+                        ((TextView) findViewById(R.id.outputText)).setText(output);
+
 
                     } else {
-                        output = "Wrong guess again!";
+                        output = String.format("Wrong guess again! Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
                         ((TextView) findViewById(R.id.outputText)).setText(output);
                         pointsCounter = 0;
+
+                        if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
+                            output = getLevel.getHint(randomNum, userChoice);
+                            output += String.format("Your current score %d, total guessed correct %d", currentPoints, overallCorrect);
+                            ((TextView) findViewById(R.id.outputText)).setText(output);
+                        }
+
                     }
 
 
-                //}
-
-                if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
-                    output = getLevel.getHint(randomNum, userChoice);
-                    ((TextView) findViewById(R.id.outputText)).setText(output);
                 }
 
 
 
 
+
+
             }
 
 
         });
 
 
-
-
-
-       /* exitGame=(Button) findViewById(R.id.exitGame);
-        getNumber.setOnClickListener(new View.OnClickListener() {
-
+       tohome=(Button) findViewById(R.id.guessToHome);
+        tohome.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View exit) {
+            public void onClick(View v){
 
-                userExitGame();
+                if(highScore < currentPoints)
+                {
+                    highScore = currentPoints;
+                }
 
+                output = "";
+
+                pointsCounter = 0;
+                currentPoints = 0;
+                overallCorrect = 0;
+
+
+                Intent intent=new Intent(GameActivityEasy.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
 
         });
-*/
+
+
 
 
     }
 
-    public void userExitGame()
-    {
-       output = String.format("Thank you for playing our game, your score for this session is %d, and you got a total of %d correct overall. Click homepage to return back to the homepage screen.", currentPoints, overallCorrect);
-
-    }
 
 }
