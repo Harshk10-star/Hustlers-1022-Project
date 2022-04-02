@@ -22,8 +22,10 @@ public class getLevel {
         int extreme=rand.nextInt(99)+1;
         return extreme;
     }
-    public static int toInteger(String m){
-        int t=Integer.parseInt(m);
+
+
+    public static int toInteger(String n){
+        int t = Integer.parseInt(n);
         return t;
     }
 }

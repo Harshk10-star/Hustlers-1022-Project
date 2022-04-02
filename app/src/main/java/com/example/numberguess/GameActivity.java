@@ -21,26 +21,32 @@ public class GameActivity extends AppCompatActivity {
     private int randomNum;
     private String level;
     private int number;
+
     public GameActivity(String level){
         this.level=level;
         if(level=="easy"){
             number=getLevel.easy();
         }else if(level=="medium"){
-            number=getLevel.easy();
+            number=getLevel.medium();
         }else if(level=="hard") {
             number = getLevel.hard();
         }else if(level=="extreme") {
             number = getLevel.extreme();
         }
     }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
 
+
+
     }
-    public void  onClick(View v){
+
+    public void  onClickOther(View v){
         EditText textInput= (EditText) findViewById(R.id.guessText);
         String convertTextToString=textInput.getText().toString();
 
@@ -51,7 +57,7 @@ public class GameActivity extends AppCompatActivity {
             if(level=="easy"){
                 number=getLevel.easy();
             }else if(level=="medium"){
-                number=getLevel.easy();
+                number=getLevel.medium();
             }else if(level=="hard") {
                 number = getLevel.hard();
             }else if(level=="extreme") {
@@ -66,8 +72,6 @@ public class GameActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
 
