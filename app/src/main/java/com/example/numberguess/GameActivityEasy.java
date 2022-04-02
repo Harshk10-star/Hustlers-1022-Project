@@ -69,7 +69,7 @@ public class GameActivityEasy extends AppCompatActivity {
                     ((TextView) findViewById(R.id.outputText)).setText(output);
                 }
 
-}
+
 
 
 
