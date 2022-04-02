@@ -80,18 +80,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instructions" />
 
-    <!--    <Button-->
-<!--        android:id="@+id/themes"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#F44336"-->
-<!--        android:text="Themes"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/highscores"-->
-<!--        app:layout_constraintVertical_bias="0.029" />-->
-    <Spinner
+       <Button
+        android:id="@+id/themes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F44336"
+        android:text="Themes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highscores"
+        app:layout_constraintVertical_bias="0.029" />
+    
+<!--     <Spinner
         android:id="@+id/themeMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,6 +102,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highscores"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.078" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
