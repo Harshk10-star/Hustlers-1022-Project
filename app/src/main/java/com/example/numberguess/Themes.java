@@ -1,17 +1,16 @@
 package com.example.numberguess;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 
 public class Themes extends AppCompatActivity {
-
     private Button Main;
 //    private Button tech;
 //    private Button storm;
@@ -27,17 +26,17 @@ public class Themes extends AppCompatActivity {
 
 
 
-            Main=(Button) findViewById(R.id.themesToHome);
-            Main.setOnClickListener(new View.OnClickListener(){
-                @Override
-            public void onClick(View v){
-                Intent intent=new Intent(Themes.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-//
-//            final RelativeLayout background;
+                Main=(Button) findViewById(R.id.themesToHome);
+                Main.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+                            Intent intent=new Intent(Themes.this,MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                 });
+
+            //            final RelativeLayout background;
 //
 //            background=findViewById(R.id.themesBack);
 //
