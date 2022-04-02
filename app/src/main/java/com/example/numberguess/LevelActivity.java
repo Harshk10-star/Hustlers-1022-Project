@@ -15,7 +15,7 @@ public class LevelActivity extends AppCompatActivity {
     private Button hardToGame;
     private Button extremeToGame;
 
-
+    //getLevel getLevel = new getLevel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +39,17 @@ public class LevelActivity extends AppCompatActivity {
         easyToGame.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                levelChosen="easy";
+
+
 //                new GameActivity(levelChosen);
-                Intent intent=new Intent(LevelActivity.this,GameActivity.class);
+               // getLevel getLevel = new getLevel();
+             //   getLevel.setLevelChosen("easy");
+//
+
+
+
+
+                Intent intent=new Intent(LevelActivity.this,GameActivityEasy.class);
                 startActivity(intent);
                 finish();
 
@@ -56,7 +64,7 @@ public class LevelActivity extends AppCompatActivity {
             public void onClick(View v){
                 levelChosen="medium";
 //                new GameActivity(levelChosen);
-                Intent intent=new Intent(LevelActivity.this,GameActivity.class);
+                Intent intent=new Intent(LevelActivity.this,GameActivityMedium.class);
                 startActivity(intent);
                 finish();
 
@@ -100,10 +108,8 @@ public class LevelActivity extends AppCompatActivity {
 
     }
 
-    public String getLevelChosen(){
 
-        return levelChosen;
 
-    }
+
 
 }

@@ -30,13 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonInstructions=(Button) findViewById(R.id.instructions);
-        buttonInstructions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,InstructionsActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        buttonInstructions.setOnClickListener(v -> {
+            Intent intent=new Intent(MainActivity.this,InstructionsActivity.class);
+            startActivity(intent);
+            finish();
+
         });
 
         buttonHigh=(Button) findViewById(R.id.highscores);
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         buttonThemes=(Button) findViewById(R.id.themes);
         buttonThemes.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,Themes.class);
                 startActivity(intent);
                 finish();
