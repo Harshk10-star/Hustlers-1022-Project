@@ -46,6 +46,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+        buttonHigh=(Button) findViewById(R.id.themes);
+        buttonHigh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(MainActivity.this,ScoresActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+
     }
 
 }
