@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         
-        buttonHigh=(Button) findViewById(R.id.themes);
+      /*  buttonHigh=(Button) findViewById(R.id.themes);
         buttonHigh.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v){
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                    finish();
     
                }
-           });
+           });*/
 
 //         themesMenu = (Spinner) findViewById(R.id.themeMenu);
 //         ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.themes));

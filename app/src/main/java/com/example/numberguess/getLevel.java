@@ -1,4 +1,7 @@
 package com.example.numberguess;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog.Builder;
+
 import java.util.Random;
 import java.util.logging.Level;
 
@@ -23,8 +26,8 @@ public class getLevel {
     LevelActivity levelActivity = new LevelActivity();
 
 
-    public void getValueOfLevel()
-    { levelChosen = levelActivity.getLevelChosen(); }
+
+
 
     public int getRandomNum() {
         int randomNum = 0;
@@ -82,7 +85,7 @@ public class getLevel {
 
     }
 
-    public static boolean checkAnswerCorrect(int randomNum, int guessedNum){
+    public boolean checkAnswerCorrect(int randomNum, int guessedNum){
         boolean guessedRandomNum = false;
         if(randomNum == guessedNum)
         {
@@ -194,9 +197,6 @@ public class getLevel {
         }
         return hint;
     }
-
-
-
 
 
 

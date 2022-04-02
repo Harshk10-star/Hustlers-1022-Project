@@ -1,3 +1,4 @@
+/*
 package com.example.numberguess;
 
 import android.content.Intent;
@@ -72,4 +73,4 @@ public class Themes extends AppCompatActivity {
 
         }
 
-}
+}*/
