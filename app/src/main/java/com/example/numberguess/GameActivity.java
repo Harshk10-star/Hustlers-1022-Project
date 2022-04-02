@@ -29,22 +29,8 @@ public class GameActivity extends AppCompatActivity {
                 EditText textInput= (EditText) findViewById(R.id.guessText);
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
-                if(userChoice==number){
-                    if(level=="easy"){
-                        number=getLevel.easy();
-                    }else if(level=="medium"){
-                        number=getLevel.medium();
-                    }else if(level=="hard") {
-                        number = getLevel.hard();
-                    }else if(level=="extreme") {
-                        number = getLevel.extreme();
-                    }
-                    String sendBack="Good Job! Guess next number!";
-                    ((TextView)findViewById(R.id.response)).setText(sendBack);
-                }else{
-                    String sendBack="Incorrect try agai!";
-                    ((TextView)findViewById(R.id.response)).setText(sendBack);
-                }
+
+
             }
         });
 

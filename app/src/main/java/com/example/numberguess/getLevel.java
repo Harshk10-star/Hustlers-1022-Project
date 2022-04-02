@@ -204,7 +204,8 @@ public class getLevel {
 
 
 
-
-
-
+    public static int toInteger(String n){
+        int t = Integer.parseInt(n);
+        return t;
+    }
 }
