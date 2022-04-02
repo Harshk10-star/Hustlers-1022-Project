@@ -66,16 +66,13 @@ public class GameActivityEasy extends AppCompatActivity {
                         pointsCounter = 0;
                     }
 
-                    if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
-                        output = getLevel.getHint(randomNum, userChoice);
-                        ((TextView) findViewById(R.id.outputText)).setText(output);
-                    } else {
-                        output = " The number you guessed is incorrect, keep on trying!";
-                        ((TextView) findViewById(R.id.outputText)).setText(output);
-                    }
+
                 }
 
-
+                if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
+                    output = getLevel.getHint(randomNum, userChoice);
+                    ((TextView) findViewById(R.id.outputText)).setText(output);
+                }
 
 
 
