@@ -72,9 +72,6 @@ public class GameActivityEasy extends AppCompatActivity {
                 if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
                     output = getLevel.getHint(randomNum, userChoice);
                     ((TextView) findViewById(R.id.outputText)).setText(output);
-                }else{
-                    output ="";
-                    ((TextView) findViewById(R.id.outputText)).setText(output);
                 }
 
 
