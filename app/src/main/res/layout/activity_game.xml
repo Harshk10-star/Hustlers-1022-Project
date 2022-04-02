@@ -11,7 +11,6 @@
         android:id="@+id/textView6"
         android:layout_width="236dp"
         android:layout_height="50dp"
-        android:fontFamily="@font/merienda_one"
         android:text="Guess the X!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
