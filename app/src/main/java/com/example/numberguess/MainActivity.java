@@ -46,24 +46,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        
+        buttonHigh=(Button) findViewById(R.id.themes);
+        buttonHigh.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v){
+                   Intent intent=new Intent(MainActivity.this,Themes.class);
+                   startActivity(intent);
+                   finish();
+    
+               }
+           });
 
-
-
-       //        buttonHigh=(Button) findViewById(R.id.themes);
-//        buttonHigh.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v){
-//                Intent intent=new Intent(MainActivity.this,Themes.class);
-//                startActivity(intent);
-//                finish();
-//
-//            }
-//        });
-
-        themesMenu = (Spinner) findViewById(R.id.themeMenu);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.themes));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        themesMenu.setAdapter(adapter);
+//         themesMenu = (Spinner) findViewById(R.id.themeMenu);
+//         ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.themes));
+//         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//         themesMenu.setAdapter(adapter);
 
 
 
