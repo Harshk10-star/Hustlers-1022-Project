@@ -41,13 +41,13 @@ public class GameActivityEasy extends AppCompatActivity {
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
-                if(userChoice==0)
+             /*   if(userChoice==0)
                 {
                     //that means they want to exit the game
                     userExitGame();
 
                 }
-                else {
+                else {*/
 
                     if (getLevel.checkAnswerCorrect(randomNum, userChoice) == true) {
                         output = "The number you guessed is correct! Keep Going!";
@@ -67,7 +67,7 @@ public class GameActivityEasy extends AppCompatActivity {
                     }
 
 
-                }
+                //}
 
                 if (((CheckBox) findViewById(R.id.hintCheckBox)).isChecked() == true) {
                     output = getLevel.getHint(randomNum, userChoice);
@@ -80,26 +80,24 @@ public class GameActivityEasy extends AppCompatActivity {
             }
 
 
-
-
-
-
-
         });
 
-        exitGame=(Button) findViewById(R.id.exitGame);
+
+
+
+
+       /* exitGame=(Button) findViewById(R.id.exitGame);
         getNumber.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View exit) {
 
                 userExitGame();
 
             }
 
         });
-
-
+*/
 
 
     }
