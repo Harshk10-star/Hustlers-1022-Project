@@ -23,7 +23,7 @@ public class LevelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_level);
 
 
-        tohome=(Button) findViewById(R.id.homeFromLevel);
+        tohome=(Button) findViewById(R.id.Home);
         tohome.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
