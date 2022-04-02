@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonHigh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent=new Intent(MainActivity.this,ScoresActivity.class);
+                Intent intent=new Intent(MainActivity.this,Themes.class);
                 startActivity(intent);
                 finish();
 
