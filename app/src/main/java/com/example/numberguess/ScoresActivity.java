@@ -19,7 +19,19 @@ public class ScoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
-
+        Bundle bundle=getIntent().getExtras();
+        int num=bundle.getInt("message");
+        String m=getLevel.toString(num);
+        String l=bundle.getString("d");
+        if(l=="easy"){
+            ((TextView) findViewById(R.id.easyScore)).setText(m);
+        }else if(l=="medium"){
+            ((TextView) findViewById(R.id.mediumScore)).setText(m);
+        }else if(l=="hard"){
+            ((TextView) findViewById(R.id.hardScore)).setText(m);
+        }else if(l=="extreme"){
+            ((TextView) findViewById(R.id.extremeScore)).setText(m);
+        }
 
 
 

@@ -12,12 +12,15 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonInstructions;
     private Button buttonHigh;
     private Button buttonThemes;
-
+    private int high;
+    private String level;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Bundle bundle=getIntent().getExtras();
+        high=bundle.getInt("message");
+        level=bundle.getString("d");
         buttonStart=(Button) findViewById(R.id.start);
         buttonStart.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent=new Intent(MainActivity.this,ScoresActivity.class);
+                intent.putExtra("message",high);
+                intent.putExtra("d",level);
                 startActivity(intent);
                 finish();
 

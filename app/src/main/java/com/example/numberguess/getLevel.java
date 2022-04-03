@@ -171,4 +171,8 @@ public class getLevel {
         int t = Integer.parseInt(n);
         return t;
     }
+    public static String toString(int n){
+        String m=String.valueOf(n);
+        return m;
+    }
 }

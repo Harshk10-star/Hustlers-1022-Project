@@ -114,10 +114,9 @@ public class GameActivityEasy extends AppCompatActivity {
                     mostCorrect = overallCorrect;
                 }
 
-                InstructionsActivity IA = new InstructionsActivity();
 
-               /* output = String.format("HighScore: %d, Most Correct: %d", highScore, mostCorrect );
-                ((TextView) findViewById(R.id.easyScore)).setText(output);*/
+
+
 
                 output = "";
 
@@ -127,6 +126,8 @@ public class GameActivityEasy extends AppCompatActivity {
 
 
                 Intent intent=new Intent(GameActivityEasy.this,MainActivity.class);
+                intent.putExtra("message",highScore);
+                intent.putExtra("d","easy");
                 startActivity(intent);
                 finish();
             }
