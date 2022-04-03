@@ -3,13 +3,10 @@ package com.example.numberguess;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -27,11 +24,11 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
     //    randomNum = getLevel.getRandomNum();
 
-        getNumber=(Button) findViewById(R.id.guessButton);
+        getNumber=(Button) findViewById(R.id.guessButtonM);
         getNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText textInput= (EditText) findViewById(R.id.guessText);
+                EditText textInput= (EditText) findViewById(R.id.guessTextM);
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
