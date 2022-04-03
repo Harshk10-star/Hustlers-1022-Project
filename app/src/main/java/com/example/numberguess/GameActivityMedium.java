@@ -19,6 +19,7 @@ public class GameActivityMedium extends AppCompatActivity {
     private int currentPoints;
     private int highScore;
     private int overallCorrect;
+    private int mostCorrect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class GameActivityMedium extends AppCompatActivity {
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
 
-                if(userChoice>0 && userChoice<11){
+                if(userChoice>0 && userChoice<31){
                     if(userChoice==0)
                     {
                         Intent intent=new Intent(GameActivityMedium.this,MainActivity.class);
@@ -104,6 +105,16 @@ public class GameActivityMedium extends AppCompatActivity {
                 {
                     highScore = currentPoints;
                 }
+
+                if(mostCorrect < overallCorrect)
+                {
+                    mostCorrect = overallCorrect;
+                }
+
+
+
+                output = String.format("HighScore: %d, Most Correct: %d", highScore, mostCorrect );
+                ((TextView) findViewById(R.id.easyScore)).setText(output);
 
                 output = "";
 
