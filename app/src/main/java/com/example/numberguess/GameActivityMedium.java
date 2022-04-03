@@ -25,7 +25,8 @@ public class GameActivityMedium extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_medium);
-
+        String ins="Pick a number 1-31. Check the hint box for a hint!";
+        ((TextView) findViewById(R.id.instructionsNum)).setText(ins);
 
         randomNum = getLevel.getRandomNum("medium");
 

@@ -27,6 +27,8 @@ public class GameActivityEasy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_easy);
 
+        String ins="Pick a number 1-10. Check the hint box for a hint!";
+        ((TextView) findViewById(R.id.instructionsNum)).setText(ins);
 
         randomNum = getLevel.getRandomNum("easy");
 
