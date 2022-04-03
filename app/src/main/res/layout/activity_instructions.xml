@@ -26,24 +26,25 @@
 
     <TextView
         android:id="@+id/ins"
-        android:layout_width="400dp"
-        android:layout_height="598dp"
+        android:layout_width="350dp"
+        android:layout_height="494dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="sans-serif"
-        android:text="The number will be randomized between the parameter numbers \n 1-10(easy),\n 1-30(medium),\n 1-50(hard), \n 1-100(extreme). \n\n
-         You can select your level. You have unlimited guesses until you enter a 0, however the number being guessed  will be different each time after you get it correct.
-         The program records how many successful guesses the user had in a row and stores it in high score and the most correctly guessed.\n\n\n
-          The points are calculated by multiplying the base point by 2 consecutively depending on your streak of guesses. Each time you break your streak the staking of points resets to the base points and all your points are added at the end. \n base point easy:1 \n base point medium: 2 \n base point hard: 3 \n base point extreme: 5\n\n You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
+        android:text="The number will be randomized between the parameter numbers \n 1-10(easy),1-30(medium),\n 1-50(hard), 1-100(extreme). \n\n
+         You can select your level. You have unlimited guesses until you enter a 0, however the number being guessed  will be different each time after you get it correct.\n\n
+          The points are calculated by multiplying the base point by 2 consecutively depending on your streak of guesses.
+Each time you break your streak the staking of points resets to the base points and all your points are added at the end.
+          \n BP easy:1, medium: 2, hard: 3, extreme: 5\n\n
+          Forex: 3 guessed in row in easy level is 1+2+4 and if you get one wrong than guess two its 1+2 so total is 10. \n\n
+          You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.435" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/HomePage"
@@ -55,5 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ins" />
+        app:layout_constraintTop_toBottomOf="@+id/ins"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
