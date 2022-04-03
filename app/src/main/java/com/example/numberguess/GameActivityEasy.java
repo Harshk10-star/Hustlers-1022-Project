@@ -20,6 +20,7 @@ public class GameActivityEasy extends AppCompatActivity {
     private int currentPoints;
     private int highScore;
     private int overallCorrect;
+    private int mostCorrect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +106,16 @@ public class GameActivityEasy extends AppCompatActivity {
                 {
                     highScore = currentPoints;
                 }
+
+                if(mostCorrect < overallCorrect)
+                {
+                    mostCorrect = overallCorrect;
+                }
+
+
+
+                output = String.format("HighScore: %d, Most Correct: %d", highScore, mostCorrect );
+                ((TextView) findViewById(R.id.easyScore)).setText(output);
 
                 output = "";
 
