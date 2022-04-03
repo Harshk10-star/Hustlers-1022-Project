@@ -30,11 +30,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonInstructions=(Button) findViewById(R.id.instructions);
-        buttonInstructions.setOnClickListener(v -> {
-            Intent intent=new Intent(MainActivity.this,InstructionsActivity.class);
-            startActivity(intent);
-            finish();
+        buttonInstructions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,InstructionsActivity.class);
+                startActivity(intent);
+                finish();
 
+            }
         });
 
         buttonHigh=(Button) findViewById(R.id.highscores);
