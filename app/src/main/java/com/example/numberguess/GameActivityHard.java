@@ -39,7 +39,8 @@ public class GameActivityHard extends AppCompatActivity {
                 EditText textInput= (EditText) findViewById(R.id.guessText);
                 String convertTextToString=textInput.getText().toString();
                 int userChoice=getLevel.toInteger(convertTextToString);
-
+                String ins="Pick a number 1-50. Check the hint box for a hint!";
+                ((TextView) findViewById(R.id.instructionsNum)).setText(ins);
                 if(userChoice>0 && userChoice<51){
                     if(userChoice==0)
                     {
