@@ -106,6 +106,11 @@ public class GameActivityEasy extends AppCompatActivity {
                     highScore = currentPoints;
                 }
 
+
+
+                output = String.format("HighScore: %d, Most Correct: %d", highScore, overallCorrect );
+                ((TextView) findViewById(R.id.easyScore)).setText(output);
+
                 output = "";
 
                 pointsCounter = 0;
