@@ -113,7 +113,7 @@ public class GameActivityHard extends AppCompatActivity {
 
 
                 output = String.format("HighScore: %d, Most Correct: %d", highScore, mostCorrect );
-                ((TextView) findViewById(R.id.easyScore)).setText(output);
+                ((TextView) findViewById(R.id.hardScore)).setText(output);
 
                 output = "";
 
