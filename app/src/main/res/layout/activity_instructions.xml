@@ -53,7 +53,7 @@ Each time you break your streak the staking of points resets to the base points 
         android:layout_marginTop="8dp"
         android:text="Go to Home"
         android:textColor="@color/white"
-        android:background="@drawable/change_button_colour"
+        android:backgroundTint="@drawable/change_button_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
