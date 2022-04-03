@@ -79,7 +79,7 @@ public class LevelActivity extends AppCompatActivity {
             public void onClick(View v){
                 levelChosen="hard";
 //                new GameActivity(levelChosen);
-                Intent intent=new Intent(LevelActivity.this,GameActivity.class);
+                Intent intent=new Intent(LevelActivity.this,GameActivityHard.class);
                 startActivity(intent);
                 finish();
 
@@ -95,7 +95,7 @@ public class LevelActivity extends AppCompatActivity {
             public void onClick(View v){
                 levelChosen="extreme";
 //                new GameActivity(levelChosen);
-                Intent intent=new Intent(LevelActivity.this,GameActivity.class);
+                Intent intent=new Intent(LevelActivity.this,GameActivityExtreme.class);
                 startActivity(intent);
                 finish();
 

@@ -26,10 +26,13 @@
 
     <TextView
         android:id="@+id/ins"
-        android:layout_width="387dp"
-        android:layout_height="353dp"
+        android:layout_width="400dp"
+        android:layout_height="598dp"
         android:fontFamily="sans-serif"
-        android:text="The number will be randomized between the parameter numbers 1-10(easy), 1-30(medium), 1-50(hard).  You can select your level. You have unlimited guesses until you enter a 0, however the number being guessed  will be different each time. The program records how many successful guesses the user had in a row and stores it in high score, the most correctly guessed in a row, along with displaying a congratulatory message. The points associated with the user guessing the  number correctly will be dependent upon the level and number of guesses correct in a row. For easy level the base point is 1, for medium level it is 2. For the hard level the base point is 3 and for the extreme level the base point is 5.  You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
+        android:text="The number will be randomized between the parameter numbers \n 1-10(easy),\n 1-30(medium),\n 1-50(hard), \n 1-100(extreme). \n\n
+         You can select your level. You have unlimited guesses until you enter a 0, however the number being guessed  will be different each time after you get it correct.
+         The program records how many successful guesses the user had in a row and stores it in high score and the most correctly guessed.\n\n\n
+          The points are calculated by multiplying the base point by 2 consecutively depending on your streak of guesses. Each time you break your streak the staking of points resets to the base points and all your points are added at the end. \n base point easy:1 \n base point medium: 2 \n base point hard: 3 \n base point extreme: 5\n\n You can click hints to turn on the hints while you play the game.  GOOD LUCK! "
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/black"
@@ -49,6 +52,7 @@
         android:layout_marginTop="8dp"
         android:text="Go to Home"
         android:textColor="@drawable/change_button_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ins" />

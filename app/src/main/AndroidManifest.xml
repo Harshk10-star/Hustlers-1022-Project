@@ -22,9 +22,6 @@
             android:name=".GameActivityEasy"
             android:exported="false" />
         <activity
-            android:name=".GameActivity"
-            android:exported="false" />
-        <activity
             android:name=".ScoresActivity"
             android:exported="false" />
         <activity
